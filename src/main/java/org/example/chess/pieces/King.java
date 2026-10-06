@@ -9,7 +9,10 @@ import org.example.chess.Colour;
 public class King extends ChessPiece {
     private ChessMatch chessMatch;
 
-    public King(Board board, Colour colour) { super(board, colour); }
+    public King(Board board, Colour colour, ChessMatch chessMatch) {
+        super(board, colour);
+        this.chessMatch = chessMatch;
+    }
 
     @Override
     public String toString() { return "K"; }
