@@ -1,6 +1,9 @@
 package org.example.chess;
 
 import org.example.boardgame.Board;
+import org.example.boardgame.Position;
+import org.example.chess.pieces.King;
+import org.example.chess.pieces.Rook;
 
 public class ChessMatch {
     private Board board;
@@ -17,5 +20,10 @@ public class ChessMatch {
             }
         }
         return mat;
+    }
+
+    private void initialSetup(){
+        board.placePiece(new Rook(board, Colour.WHITE), new Position(2,1));
+        board.placePiece(new King(board, Colour.BLACK), new Position(0,4));
     }
 }
